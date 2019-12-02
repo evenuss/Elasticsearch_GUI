@@ -1,0 +1,146 @@
+<body>
+<form action="/cariindex" method="post">
+    <table align="center">
+        <tr>
+            <td><h3>Select Index</h3></td>
+        </tr>
+        <tr>
+            <td>
+                <select name="index" id="index">
+                    {% for index in context %}
+                    <option value="{{index}}">{{index}}</option>
+                    {% endfor %}
+                </select>
+            </td>
+            <td><input type="submit" name="cari" value="cari"></td>
+        </tr>
+    </table>
+</form>
+     <table border="2" align="center">
+        <tr>
+            {% for title in layer_list %}
+            <th>{{title}}</th>
+            {% endfor %}
+            <th colspan="2">Action</th>
+        </tr>
+         <tr>
+             {% for doc in layer_dict%}
+                 {% for title in layer_list %}
+             <td>{{doc[title]}}</td>
+                {% endfor %}
+             <td><a href="/delete/{{doc['id']}}/{{doc['_index']}}">Hapus</a></td>
+             <td><a href="/edit/{{doc['id']}}/{{doc['_index']}}">Edit</a></td>
+         </tr>{% endfor %}
+    </table>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--{% extends "layout.html" %}-->
+
+
+<!--<body style="background-color: #f2f2f2;">-->
+<!--    {% block main %}-->
+<!--<div class="side-bar">-->
+<!--    &lt;!&ndash; <p>Your cluster Name: {{ context.cluster }}</p> &ndash;&gt;-->
+<!--    <p>{{ context.cluster }}</p>-->
+<!--    -->
+<!--</div>-->
+<!--<div class="content">-->
+<!--    <form action="" method="POST">-->
+<!--        -->
+<!--            <tr>-->
+<!--                {% for co in results %}-->
+<!--                        {{ co }}-->
+<!--                {% endfor %}-->
+<!--                <h3>Find Index</h3>-->
+<!--                {% for type in data %}-->
+<!--                    {{ type }}-->
+<!--                {% endfor %}-->
+<!--                <td>-->
+<!--            -->
+<!--                    <label for="index">Search Your Index :</label>-->
+<!--                   -->
+<!--                    <select name="cari-index" id="cari-index">-->
+<!--                            {% for doc in context.data %}-->
+<!--                        <option value="{{ doc }}">{{ doc }}</option>-->
+
+<!--                        {% endfor %}-->
+<!--                    </select>-->
+<!--                    <input type="submit" name="search" value="Search">-->
+<!--                </td>-->
+<!--               </tr>-->
+<!--            </table>-->
+<!--            <table border="">-->
+<!--            <tr>    -->
+<!--                    {% for key in key_list %}-->
+<!--                    <th>{{ key }}</th>-->
+<!--                {% endfor%}-->
+<!--                <th>Action</th>-->
+<!--                -->
+<!--            </tr>-->
+<!--            <tr>-->
+<!--                {% for resp in resp2 %}-->
+<!--                    {% for key in key_list %}-->
+<!--                        <td>{{ resp[key] }}</td>-->
+<!--                    {% endfor%}-->
+<!--                    <td rowspan="2" >-->
+<!--                        <a href="">Edit</a>-->
+<!--                        <a href="/delete?id={{resp[author]}}">Delete</a>-->
+<!--                    </td>-->
+<!--                {% endfor%}-->
+<!--            </tr>  -->
+<!--        </table>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</body>-->
+<!--{% endblock %}-->

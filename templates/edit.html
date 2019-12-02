@@ -1,0 +1,23 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <form action="" method="POST">
+       <table align="center">
+          {% for doc in isi %}
+                {% for title in layer_lists %}
+           <tr>
+               <th>{{title}}</th>
+               <td><input type="text" name="{{title}}" value="{{doc[title]}}"></td>
+           </tr>
+                {% endfor %}
+           <tr>
+               <td><input type="submit" value="update"></td>
+           </tr>
+           {% endfor %}
+
+       </table>
+    </form>
+</body>
+</html>

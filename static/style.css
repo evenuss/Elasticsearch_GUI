@@ -1,0 +1,121 @@
+body{
+    margin: 0;
+    background: url("img/0.jpeg")no-repeat fixed center;
+
+}
+
+
+.header {
+    background-color: #336B87;
+    padding: 1px;
+    padding-left: 18rem ;
+    text-align: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-style: italic; */
+    /* color: rgb(247, 232, 22); */
+    /* color: yellow; */
+    color: white;
+    box-shadow: 10px 10px 5px grey;
+    font-size: 20px;
+    z-index: 3;
+}
+
+
+
+.connect-form table{
+    color: white;
+    display: block;
+    margin:50px;
+    margin-top: 14rem;
+    margin-left: 38%;
+    padding: 4rem;
+    width: max-content;
+    height: max-content;
+    border-radius: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+.connect-form,input{
+   margin-top: 20px;
+}
+
+.side-bar{
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: #2A3132;
+    overflow-x: hidden;
+    padding-top: 20px;
+    /* box-shadow: 10px 10px 0px grey; */
+    
+}
+
+.side-bar p {
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    /* padding: 6px 8px 6px 16px; */
+    text-decoration: none;
+    font-size: 14px;
+    /* pointer-events: none; */
+    margin-top: -20;
+    color: white;
+    display: block;
+    padding: 20px;
+    background: #1995AD;
+  }
+  
+  .side-bar ul a {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    /* padding: 6px 8px 6px 16px; */
+
+    text-decoration: none;
+    width: 100%;
+    font-size: 14px;
+    margin-top: -14px;
+    /* pointer-events: none; */
+    color: #ffffff70;
+    display: list-item;
+    padding: 1px;
+    padding-top: 2rem;
+    /* background: orange; */
+    
+  }
+
+.side-bar a:hover {
+    color: white;
+}
+
+  .content{
+      z-index: 10;
+      width: 75%;
+      height: 75%;
+      
+      margin-left: 20rem;
+      margin-top: 5rem;
+      /* margin-top:20rem;
+      margin-left: 20rem; */
+      background: white;
+      position: fixed;
+  }
+
+.content select{
+    margin: 50px;
+}
+
+select{
+    width: 12rem;
+    border-style: none;
+    background: white;
+    border: 2px solid #f2f2f2;
+    border-radius: 4px;
+    height: 30px;
+    cursor: pointer;
+}
